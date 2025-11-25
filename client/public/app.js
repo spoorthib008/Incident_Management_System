@@ -1,6 +1,6 @@
 // client/public/app.js
 
-const API_BASE = 'http://localhost:3000/api/incidents';
+const API_BASE = 'http://https://incident-management-system-backend-81vl.onrender.com/api/incidents';
 
 // ---------- DOM REFERENCES ----------
 const createModal = document.getElementById('createModal');
