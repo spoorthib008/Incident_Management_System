@@ -1,0 +1,129 @@
+<!-- client/public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Incident Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Incident Management System</h1>
+    <button id="openCreateModalBtn">Create Incident</button>
+  </header>
+
+    <main>
+    <section>
+      <h2>Incidents</h2>
+
+      <!-- Day 9 toolbar: filter + loading + global message -->
+      <div class="toolbar">
+        <label for="statusFilter">Filter by status:</label>
+        <select id="statusFilter">
+          <option value="">All</option>
+          <option value="open">Open</option>
+          <option value="closed">Closed</option>
+        </select>
+        <span id="loadingIndicator" style="display:none; margin-left:10px;">
+          Loading...
+        </span>
+      </div>
+      <div id="globalMessage" class="message"></div>
+      <!-- end toolbar -->
+
+      <table id="incidentsTable">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Description</th>
+            <th>Remarks</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Incidents will be loaded here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+
+  <!-- Create Incident Modal -->
+  <div class="modal" id="createModal">
+    <div class="modal-content">
+      <span class="close" id="closeCreateModalBtn">&times;</span>
+      <h2>Create Incident</h2>
+      <form id="createIncidentForm">
+        <label>Type
+          <input type="text" name="type" required />
+        </label>
+
+        <label>Incident Start Date
+          <input type="date" name="incidentStartDate" required />
+        </label>
+
+        <label>Incident End Date
+          <input type="date" name="incidentEndDate" />
+        </label>
+
+        <label>Description
+          <textarea name="description" required></textarea>
+        </label>
+
+        <label>Remarks
+          <textarea name="remarks"></textarea>
+        </label>
+
+        <button type="submit">Create</button>
+      </form>
+      <div id="createMessage" class="message"></div>
+    </div>
+  </div>
+
+  <!-- Update Incident Modal (for Day 7) -->
+  <div class="modal" id="updateModal">
+    <div class="modal-content">
+      <span class="close" id="closeUpdateModalBtn">&times;</span>
+      <h2>Update Incident</h2>
+      <form id="updateIncidentForm">
+        <input type="hidden" name="id" />
+
+        <label>Type
+          <input type="text" name="type" required />
+        </label>
+
+        <label>Incident Start Date
+          <input type="date" name="incidentStartDate" required />
+        </label>
+
+        <label>Incident End Date
+          <input type="date" name="incidentEndDate" />
+        </label>
+
+        <label>Description
+          <textarea name="description" required></textarea>
+        </label>
+
+        <label>Remarks
+          <textarea name="remarks"></textarea>
+        </label>
+
+        <label>Status
+          <select name="status">
+            <option value="open">Open</option>
+            <option value="closed">Closed</option>
+          </select>
+        </label>
+
+        <button type="submit">Update</button>
+      </form>
+      <div id="updateMessage" class="message"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

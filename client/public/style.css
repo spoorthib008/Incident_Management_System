@@ -1,0 +1,151 @@
+/* client/public/style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background: #1b74d3;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #fff;
+  color: #1b74d3;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+main {
+  padding: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background: #eee;
+}
+
+/* Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1.5rem;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  border-radius: 6px;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input, textarea, select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Buttons in table (Day 8) */
+.edit-btn, .close-btn {
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.25rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.edit-btn {
+  background: #ffc107;
+}
+
+.close-btn {
+  background: #dc3545;
+  color: #fff;
+}
+
+.status-open {
+  color: green;
+}
+
+.status-closed {
+  color: red;
+}
+
+.message {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.edit-btn, .close-btn {
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.25rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.edit-btn {
+  background: #ffc107;
+}
+
+.close-btn {
+  background: #dc3545;
+  color: #fff;
+}
+
+.status-open {
+  color: green;
+}
+
+.status-closed {
+  color: red;
+}
+
